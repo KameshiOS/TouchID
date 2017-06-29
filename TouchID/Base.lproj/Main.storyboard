@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="iWy-9c-fBW">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Touch ID-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="AuthenticationViewController" customModule="TouchID" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="a8k-He-QPU">
+                                <rect key="frame" x="99.5" y="257" width="175" height="154"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="touchID" translatesAutoresizingMaskIntoConstraints="NO" id="Y1I-l5-4Hd">
+                                        <rect key="frame" x="37.5" y="0.0" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="bCA-qZ-Jxs"/>
+                                            <constraint firstAttribute="width" constant="100" id="jcS-oZ-ePl"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wf2-Sf-f59" customClass="RoundedOutlineButton" customModule="TouchID" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="104" width="175" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="pma-G0-g7p"/>
+                                            <constraint firstAttribute="width" constant="175" id="x8C-5v-gGz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                        <state key="normal" title="Use Touch ID">
+                                            <color key="titleColor" red="0.81790632009999997" green="0.2162884772" blue="0.17537638550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.81790632009999997" green="0.2162884772" blue="0.17537638550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="TouchIDButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x2q-6E-4Gm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="wf2-Sf-f59" firstAttribute="centerX" secondItem="a8k-He-QPU" secondAttribute="centerX" id="DjS-TV-kwq"/>
+                                    <constraint firstItem="Y1I-l5-4Hd" firstAttribute="centerX" secondItem="a8k-He-QPU" secondAttribute="centerX" id="K85-ha-UGo"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="a8k-He-QPU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="69S-IB-w3i"/>
+                            <constraint firstItem="a8k-He-QPU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="adU-iy-HLO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Touch ID" id="36s-Bf-mD6"/>
+                    <connections>
+                        <segue destination="wy2-gz-W5j" kind="show" identifier="successVC" id="8u0-4M-d4j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="885.60000000000002" y="506.89655172413796"/>
+        </scene>
+        <!--Success View Controller-->
+        <scene sceneID="Zeg-MJ-ri3">
+            <objects>
+                <viewController id="wy2-gz-W5j" customClass="SuccessViewController" customModule="TouchID" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="q7Y-VF-rbu"/>
+                        <viewControllerLayoutGuide type="bottom" id="ai4-b2-F0n"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="636-9S-vLp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="iFp-mt-wKv">
+                                <rect key="frame" x="100.5" y="253" width="175" height="160"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="touchIDSuccess" translatesAutoresizingMaskIntoConstraints="NO" id="kCV-ZE-503">
+                                        <rect key="frame" x="32.5" y="0.0" width="110" height="110"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="110" id="GuB-Do-4TL"/>
+                                            <constraint firstAttribute="height" constant="110" id="S7p-nt-BTg"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Success!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnB-hl-DXT">
+                                        <rect key="frame" x="0.0" y="110" width="175" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="8yV-yI-bHD"/>
+                                            <constraint firstAttribute="width" constant="175" id="G7u-JU-5q0"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                        <color key="textColor" red="0.25837790966033936" green="0.46031320095062256" blue="0.01884901337325573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iFp-mt-wKv" firstAttribute="centerY" secondItem="636-9S-vLp" secondAttribute="centerY" id="HKZ-S7-Xat"/>
+                            <constraint firstItem="iFp-mt-wKv" firstAttribute="centerX" secondItem="636-9S-vLp" secondAttribute="centerX" id="TmU-L3-iIz"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OiR-qU-ovM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1638" y="507"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="SeZ-Ne-dp4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iWy-9c-fBW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xpe-hZ-wKK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="UAJ-xu-LaR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d7c-I9-Xep" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7" y="507"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="touchID" width="163" height="158"/>
+        <image name="touchIDSuccess" width="180" height="175"/>
+    </resources>
+</document>
